@@ -62,7 +62,7 @@
     "ngx-timeago": "^1.0.3",
     "node-vibrant": "^3.1.4",
     "opencollective-postinstall": "^2.0.2",
-    "popper.js": "^1.15.0",
+    "popper.js": "^1.16.1",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "zone.js": "~0.8.26"
