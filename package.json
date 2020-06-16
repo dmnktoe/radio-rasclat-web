@@ -40,7 +40,7 @@
     "@sentry/cli": "^1.49.0",
     "@sentry/integrations": "^5.11.1",
     "@types/algoliasearch-helper": "^2.26.1",
-    "@types/jquery": "^3.3.31",
+    "@types/jquery": "^3.3.38",
     "algoliasearch": "^3.34.0",
     "angular-audio-context": "19.0.15",
     "angular-feather": "^6.0.2",
