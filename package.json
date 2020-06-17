@@ -41,7 +41,7 @@
     "@sentry/integrations": "^5.17.0",
     "@types/algoliasearch-helper": "^2.26.1",
     "@types/jquery": "^3.3.38",
-    "algoliasearch": "^3.35.1",
+    "algoliasearch": "^4.3.0",
     "angular-feather": "^6.0.10",
     "angular-instantsearch": "^3.0.0-beta.5",
     "angulartics2": "9.1.0",
