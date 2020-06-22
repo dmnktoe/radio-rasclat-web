@@ -40,7 +40,7 @@
     "@sentry/cli": "^1.54.0",
     "@sentry/integrations": "^5.17.0",
     "@types/algoliasearch-helper": "^2.26.1",
-    "@types/jquery": "^3.3.38",
+    "@types/jquery": "^3.5.0",
     "algoliasearch": "^3.35.1",
     "angular-feather": "^6.0.10",
     "angular-instantsearch": "^3.0.0-beta.5",
