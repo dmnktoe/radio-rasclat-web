@@ -11,7 +11,7 @@ addons:
   sonarcloud:
     organization: dmnktoe
     token:
-      secure: ${SONAR_TOKEN}
+      secure: myGu3QAtwfT3h8j5lvB1MOvp/+sHYdCxQkMYT930Fc9STsEWOT3czCZpmrsJ2ChvshhWZXdI3zGHd1hA1HVb9rE1InpyFJcwiuNwCFaHloNZL6Rioe8hx5DG7MI5JB9SzJX7IMCu9GAOXGYwzYz5JCZNtqyia+NAVgiUp4ft+U24htEUGhCI4E4U5IGhBD3PXI4zf7H3Ho2lMzGUzHPnfUYGEma5amj8drQ3uSbG9tSOdnUI6svPoKYkOYzRzr9ZPAYvqUOiQdw3NcGUu9cSC2QxQ9YH/OK6FqafPKrdvGZxAFX9EKHIzBH7v2AxWMWMXh/kGJS/b2F6jY0QNoYfMKjPMwiOS0E8HhoRghbmWsXImSr23kq6KyZ6I5p/OELeBK1qiYirwTCc+L+bOgAjrS2teSDqJIgBvCgEbKosHthk1hnRMuhRMEKuyOV2EIGkAKegmcu/1YDiEYsY1tmPJRUtbQpi68W7wCOlYzd4BBVd/2+k6WyICNW7egyOIj6nhBcM0Yk9l1Uzuk/r6PXFgwCDSsaqkbfou7WfdNGOO/xhwfp4gJRZefUxuVaflC9O7EIel36Bplrf+N+/F736UTU/g3e9hIoO2Mnz6NLLp+H+9Jji9zGG9rMenPfvRpyTKDrY7EryyrMTYr1aqrLz5Y5BOUv2rZA8URGskXTKCaU=
 
 cache:
   directories:
