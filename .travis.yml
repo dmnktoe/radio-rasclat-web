@@ -8,7 +8,8 @@ addons:
   chrome: stable
   sonarcloud:
     organization: 'dmnktoe'
-    token: ${SONAR_TOKEN}
+    token:
+      secure: ${SONAR_TOKEN}
 
 cache:
   directories:
