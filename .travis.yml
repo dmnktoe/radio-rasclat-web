@@ -16,6 +16,7 @@ install:
 
 script:
   - npm test
+  - npm run e2e
   - npm run build
   - bash sentry-deploy.sh
 
