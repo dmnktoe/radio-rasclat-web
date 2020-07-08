@@ -10,7 +10,7 @@
         [defaultImage]="defaultImage"
         [lazyLoad]="recording?.image"
         alt="{{ recording?.title }}"
-        style="width: 100%"
+        style="width: 100%;"
       />
     </figure>
   </div>
@@ -43,15 +43,14 @@
         }}</a></strong
       >
     </h6>
-    <h6 style="color:rgba(112,122,122,0.99)">
+    <h6 style="color: rgba(112, 122, 122, 0.99);">
       {{ recording.timeStart | date: 'dd.MM.yyyy' }},
       {{ recording.timeStart | date: 'HH:mm' }} -
       {{ recording.timeEnd | date: 'HH:mm' }}
     </h6>
     <div
       class="recording__list__text__container__tag__wrapper"
-      style="
-      padding-bottom: 9px;"
+      style="padding-bottom: 9px;"
     >
       <span
         class="recording__list__text__container__tags"

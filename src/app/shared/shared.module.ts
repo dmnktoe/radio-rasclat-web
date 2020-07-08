@@ -17,7 +17,7 @@ import { TimeagoModule } from 'ngx-timeago';
     CurrentTrackComponent,
     SafeHtmlPipe,
     LimitPipe,
-    MomentPipe
+    MomentPipe,
   ],
   exports: [
     LoaderComponent,
@@ -25,8 +25,8 @@ import { TimeagoModule } from 'ngx-timeago';
     SafeHtmlPipe,
     LimitPipe,
     MomentPipe,
-    TimeagoModule
+    TimeagoModule,
   ],
-  providers: [ApiService]
+  providers: [ApiService],
 })
 export class SharedModule {}

@@ -16,9 +16,9 @@ import { ScheduleComponent } from './schedule.component';
     TranslateModule,
     ScheduleRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
   declarations: [ScheduleComponent],
-  providers: [Title]
+  providers: [Title],
 })
 export class ScheduleModule {}

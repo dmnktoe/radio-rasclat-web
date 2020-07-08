@@ -18,8 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     RouterModule,
     SharedModule,
-    IconsModule
+    IconsModule,
   ],
-  declarations: [HeaderComponent, ShellComponent, FooterComponent]
+  declarations: [HeaderComponent, ShellComponent, FooterComponent],
 })
 export class ShellModule {}

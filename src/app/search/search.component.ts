@@ -10,32 +10,32 @@ const searchClient = algoliasearch(
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
   get searchParameters() {
     return {
       query: this.query,
-      hitsPerPage: 9
+      hitsPerPage: 9,
     };
   }
 
   public recordingsConfig = {
     indexName: environment.algoliaRecordingsIndex,
     routing: true,
-    searchClient
+    searchClient,
   };
 
   public showsConfig = {
     indexName: environment.algoliaShowsIndex,
     routing: true,
-    searchClient
+    searchClient,
   };
 
   public artistsConfig = {
     indexName: environment.algoliaArtistsIndex,
     routing: true,
-    searchClient
+    searchClient,
   };
 
   private query = '';

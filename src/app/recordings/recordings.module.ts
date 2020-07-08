@@ -25,14 +25,14 @@ import { TooltipModule } from 'ng2-tooltip-directive';
     SwiperModule,
     LazyLoadImageModule,
     NgxAnalyticsModule,
-    TooltipModule
+    TooltipModule,
   ],
   declarations: [
     RecordingsComponent,
     RecordingsListComponent,
-    RecordingsSingleComponent
+    RecordingsSingleComponent,
   ],
   exports: [RecordingsListComponent],
-  providers: [ApiService, Title]
+  providers: [ApiService, Title],
 })
 export class RecordingsModule {}

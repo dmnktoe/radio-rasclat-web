@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import {
   HttpClientTestingModule,
-  HttpTestingController
+  HttpTestingController,
 } from '@angular/common/http/testing';
 import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
@@ -19,9 +19,9 @@ describe('ApiPrefixInterceptor', () => {
         {
           provide: HTTP_INTERCEPTORS,
           useClass: ApiPrefixInterceptor,
-          multi: true
-        }
-      ]
+          multi: true,
+        },
+      ],
     });
 
     http = TestBed.get(HttpClient);

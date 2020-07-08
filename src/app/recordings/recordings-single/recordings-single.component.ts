@@ -9,7 +9,7 @@ import { Palette } from 'node-vibrant/lib/color';
 @Component({
   selector: 'app-recordings-single',
   templateUrl: './recordings-single.component.html',
-  styleUrls: ['./recordings-single.component.scss']
+  styleUrls: ['./recordings-single.component.scss'],
 })
 export class RecordingsSingleComponent implements OnInit {
   recording: any;
@@ -35,7 +35,7 @@ export class RecordingsSingleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
+    this.sub = this.route.params.subscribe((params) => {
       this.isLoading = true;
       this.id = params.id;
       this.apiService
@@ -45,14 +45,14 @@ export class RecordingsSingleComponent implements OnInit {
             this.isLoading = false;
           })
         )
-        .subscribe(recording => {
+        .subscribe((recording) => {
           this.recording = recording;
           this.setTitle({ title: this.recording.title });
           Vibrant.from(
             'https://cors-anywhere.herokuapp.com/' + this.recording.image
           )
             .getPalette()
-            .then(palette => {
+            .then((palette) => {
               this.hex = palette.Vibrant.hex;
             });
         });

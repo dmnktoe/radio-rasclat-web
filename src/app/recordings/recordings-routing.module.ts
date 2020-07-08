@@ -10,18 +10,18 @@ const routes: Routes = [
     {
       path: 'broadcasts',
       component: RecordingsComponent,
-      data: { title: 'Radio Rasclat • Broadcasts' }
+      data: { title: 'Radio Rasclat • Broadcasts' },
     },
     {
       path: 'broadcasts/:id',
-      component: RecordingsSingleComponent
-    }
-  ])
+      component: RecordingsSingleComponent,
+    },
+  ]),
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [],
 })
 export class RecordingsRoutingModule {}

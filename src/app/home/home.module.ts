@@ -21,9 +21,9 @@ import { ShowsModule } from '@app/shows/shows.module';
     HomeRoutingModule,
     SwiperModule,
     RecordingsModule,
-    ShowsModule
+    ShowsModule,
   ],
   declarations: [HomeComponent],
-  providers: [ApiService, Title]
+  providers: [ApiService, Title],
 })
 export class HomeModule {}

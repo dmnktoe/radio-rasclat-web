@@ -11,7 +11,7 @@ describe('HttpCacheService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [HttpCacheService]
+      providers: [HttpCacheService],
     });
 
     // Start fresh

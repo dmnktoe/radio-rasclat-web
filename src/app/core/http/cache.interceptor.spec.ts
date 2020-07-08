@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import {
   HttpClientTestingModule,
-  HttpTestingController
+  HttpTestingController,
 } from '@angular/common/http/testing';
 import {
   HTTP_INTERCEPTORS,
   HttpClient,
-  HttpResponse
+  HttpResponse,
 } from '@angular/common/http';
 
 import { CacheInterceptor } from './cache.interceptor';
@@ -33,9 +33,9 @@ describe('CacheInterceptor', () => {
           provide: HTTP_INTERCEPTORS,
           useFactory: createInterceptor,
           deps: [HttpCacheService],
-          multi: true
-        }
-      ]
+          multi: true,
+        },
+      ],
     });
   });
 
@@ -72,7 +72,7 @@ describe('CacheInterceptor', () => {
       );
 
       // Act
-      http.get('/toto').subscribe(response => {
+      http.get('/toto').subscribe((response) => {
         // Assert
         expect(response).toEqual('cachedData');
       });
@@ -92,7 +92,7 @@ describe('CacheInterceptor', () => {
 
       httpMock.expectOne({}).flush(null, {
         status: 404,
-        statusText: 'error'
+        statusText: 'error',
       });
     });
   });
@@ -118,7 +118,7 @@ describe('CacheInterceptor', () => {
       );
 
       // Act
-      http.get('/toto').subscribe(response => {
+      http.get('/toto').subscribe((response) => {
         // Assert
         expect(response).toEqual('newData');
       });

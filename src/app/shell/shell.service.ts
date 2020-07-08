@@ -17,7 +17,7 @@ export class Shell {
       component: ShellComponent,
       children: routes,
       // Reuse ShellComponent instance when navigating between child views
-      data: { reuse: true }
+      data: { reuse: true },
     };
   }
 }

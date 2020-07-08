@@ -9,7 +9,7 @@ import { Palette } from 'node-vibrant/lib/color';
 @Component({
   selector: 'app-shows-single',
   templateUrl: './shows-single.component.html',
-  styleUrls: ['./shows-single.component.scss']
+  styleUrls: ['./shows-single.component.scss'],
 })
 export class ShowsSingleComponent implements OnInit {
   show: any;
@@ -36,7 +36,7 @@ export class ShowsSingleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
+    this.sub = this.route.params.subscribe((params) => {
       this.isLoading = true;
       this.id = params.id;
       this.apiService
@@ -46,7 +46,7 @@ export class ShowsSingleComponent implements OnInit {
             this.isLoading = false;
           })
         )
-        .subscribe(show => {
+        .subscribe((show) => {
           this.show = show;
           if (typeof show.recordings[0]['title'] !== 'undefined') {
             this.recordings = show.recordings;
@@ -56,7 +56,7 @@ export class ShowsSingleComponent implements OnInit {
           this.setTitle({ title: this.show.title });
           Vibrant.from('https://cors-anywhere.herokuapp.com/' + this.show.image)
             .getPalette()
-            .then(palette => {
+            .then((palette) => {
               this.hex = palette.Vibrant.hex;
             });
         });

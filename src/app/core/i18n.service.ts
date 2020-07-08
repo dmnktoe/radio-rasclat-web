@@ -77,7 +77,7 @@ export class I18nService {
     if (language && !isSupportedLanguage) {
       language = language.split('-')[0];
       language =
-        this.supportedLanguages.find(supportedLanguage =>
+        this.supportedLanguages.find((supportedLanguage) =>
           supportedLanguage.startsWith(language)
         ) || '';
       isSupportedLanguage = Boolean(language);

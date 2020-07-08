@@ -25,8 +25,8 @@ export const environment = {
   supportedLanguages: ['DE', 'EN', 'FR'],
   googleAnalytics: {
     domain: 'auto',
-    trackingId: 'UA-24449183-8' // replace with your Tracking Id
-  }
+    trackingId: 'UA-24449183-8', // replace with your Tracking Id
+  },
 };
 
 /*

@@ -8,7 +8,7 @@
         aria-valuenow="0"
         aria-valuemin="0"
         aria-valuemax="100"
-        style="width:0%"
+        style="width: 0%;"
       ></div>
     </div>
   </div>
@@ -16,7 +16,7 @@
     <div *ngIf="!isLoading" class="main-current" style="display: table;">
       <div
         class="current-keyvisual"
-        style="display: table-cell;vertical-align: middle;"
+        style="display: table-cell; vertical-align: middle;"
       >
         <div>
           <button (click)="onAudioPlay()" style="padding-left: 0;">
@@ -34,16 +34,16 @@
       <div
         *ngIf="currentShowImg"
         class="current-image"
-        style="display: table-cell;vertical-align: middle;"
+        style="display: table-cell; vertical-align: middle;"
       >
         <img
           src="{{ currentShowImg }}"
-          style="width: 45px;margin-right: 10px;"
+          style="width: 45px; margin-right: 10px;"
         />
       </div>
       <div
         class="current-info"
-        style="display: table-cell;vertical-align: middle;"
+        style="display: table-cell; vertical-align: middle;"
         *ngIf="currentShowName"
       >
         <h1>Live: {{ currentShowName | safeHtml }}</h1>
@@ -52,7 +52,7 @@
       </div>
       <div
         class="current-info"
-        style="display: table-cell;vertical-align: middle;"
+        style="display: table-cell; vertical-align: middle;"
         *ngIf="!currentShowName"
       >
         <h1>
@@ -61,7 +61,7 @@
         <span *ngIf="nextShowName">
           <!-- TODO: translation bug -->
           Next: {{ nextShowName }}
-          <span style="opacity: 0.4">&mdash; {{ nextShowStart }}</span>
+          <span style="opacity: 0.4;">&mdash; {{ nextShowStart }}</span>
         </span>
       </div>
     </div>
@@ -69,11 +69,11 @@
     <div *ngIf="isLoading" class="main-current" style="display: table;">
       <div
         class="current-keyvisual"
-        style="display: table-cell;vertical-align: middle;"
+        style="display: table-cell; vertical-align: middle;"
       ></div>
       <div
         class="current-info"
-        style="display: table-cell;vertical-align: middle;"
+        style="display: table-cell; vertical-align: middle;"
       >
         <app-loader></app-loader>
       </div>

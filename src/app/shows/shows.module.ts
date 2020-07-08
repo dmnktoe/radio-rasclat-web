@@ -23,10 +23,10 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     ShowsRoutingModule,
     SwiperModule,
     RecordingsModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
   ],
   declarations: [ShowsComponent, ShowsListComponent, ShowsSingleComponent],
   exports: [ShowsListComponent],
-  providers: [ApiService, Title]
+  providers: [ApiService, Title],
 })
 export class ShowsModule {}

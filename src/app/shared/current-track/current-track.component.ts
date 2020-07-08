@@ -8,7 +8,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-current-track',
   templateUrl: './current-track.component.html',
-  styleUrls: ['./current-track.component.scss']
+  styleUrls: ['./current-track.component.scss'],
 })
 export class CurrentTrackComponent implements OnInit {
   currentShowName: any;
@@ -41,14 +41,14 @@ export class CurrentTrackComponent implements OnInit {
     this.apiService
       .getCurrentShow()
       .pipe(finalize(() => {}))
-      .subscribe(currentShow => {
+      .subscribe((currentShow) => {
         if (currentShow !== null) {
           this.currentShowName = currentShow.name;
           this.currentShowImg = currentShow.image_path;
           this.currentShowStart = new Date(currentShow.starts);
           this.currentShowEnd = new Date(currentShow.ends);
           {
-            $(document).ready(function() {
+            $(document).ready(function () {
               const countDownDate = new Date(currentShow.ends).getTime();
               const startDate = new Date(currentShow.starts).getTime();
               function setBar() {
@@ -72,7 +72,7 @@ export class CurrentTrackComponent implements OnInit {
         this.apiService
           .getNextShow()
           .pipe(finalize(() => {}))
-          .subscribe(nextShow => {
+          .subscribe((nextShow) => {
             if (nextShow.length > 0) {
               const startDate = moment(
                 nextShow[0].starts,

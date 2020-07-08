@@ -32,7 +32,7 @@ export class HttpCacheService {
   setCacheData(url: string, data: HttpResponse<any>, lastUpdated?: Date) {
     this.cachedData[url] = {
       lastUpdated: lastUpdated || new Date(),
-      data: data
+      data: data,
     };
     log.debug(`Cache set for key: "${url}"`);
     this.saveCacheData();

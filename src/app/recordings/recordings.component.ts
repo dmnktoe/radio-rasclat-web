@@ -5,7 +5,7 @@ import { ApiService } from '@app/core/api.service';
 @Component({
   selector: 'app-recordings',
   templateUrl: './recordings.component.html',
-  styleUrls: ['./recordings.component.scss']
+  styleUrls: ['./recordings.component.scss'],
 })
 export class RecordingsComponent implements OnInit {
   recordings = '';
@@ -18,7 +18,7 @@ export class RecordingsComponent implements OnInit {
     this.apiService
       .getRecordings()
       .pipe(finalize(() => {}))
-      .subscribe(recordings => {
+      .subscribe((recordings) => {
         this.recordings = recordings;
         this.isLoading = false;
       });

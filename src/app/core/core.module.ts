@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   HTTP_INTERCEPTORS,
   HttpClient,
-  HttpClientModule
+  HttpClientModule,
 } from '@angular/common/http';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -29,13 +29,13 @@ import { CacheInterceptor } from './http/cache.interceptor';
     CacheInterceptor,
     {
       provide: HttpClient,
-      useClass: HttpService
+      useClass: HttpService,
     },
     {
       provide: RouteReuseStrategy,
-      useClass: RouteReusableStrategy
-    }
-  ]
+      useClass: RouteReusableStrategy,
+    },
+  ],
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

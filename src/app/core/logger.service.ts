@@ -39,7 +39,7 @@ export enum LogLevel {
   Error,
   Warning,
   Info,
-  Debug
+  Debug,
 }
 
 /**
@@ -111,7 +111,7 @@ export class Logger {
         ? ['[' + this.source + ']'].concat(objects)
         : objects;
       func.apply(console, log);
-      Logger.outputs.forEach(output =>
+      Logger.outputs.forEach((output) =>
         output.apply(output, [this.source, level, ...objects])
       );
     }

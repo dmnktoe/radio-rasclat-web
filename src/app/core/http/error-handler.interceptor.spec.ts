@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import {
   HttpClientTestingModule,
-  HttpTestingController
+  HttpTestingController,
 } from '@angular/common/http/testing';
 import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
@@ -24,9 +24,9 @@ describe('ErrorHandlerInterceptor', () => {
         {
           provide: HTTP_INTERCEPTORS,
           useFactory: createInterceptor,
-          multi: true
-        }
-      ]
+          multi: true,
+        },
+      ],
     });
 
     http = TestBed.get(HttpClient);
@@ -59,7 +59,7 @@ describe('ErrorHandlerInterceptor', () => {
 
     httpMock.expectOne({}).flush(null, {
       status: 404,
-      statusText: 'error'
+      statusText: 'error',
     });
   });
 });

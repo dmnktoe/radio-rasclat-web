@@ -15,8 +15,8 @@ import { ShowsModule } from '@app/shows/shows.module';
     SearchRoutingModule,
     NgAisModule,
     RecordingsModule,
-    ShowsModule
+    ShowsModule,
   ],
-  declarations: [SearchComponent]
+  declarations: [SearchComponent],
 })
 export class SearchModule {}

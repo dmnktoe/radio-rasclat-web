@@ -6,7 +6,7 @@ import { environment } from '@env/environment';
 /* import { Socket } from 'ngx-socket-io'; */
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
   constructor(private httpClient: HttpClient /*, public socket: Socket*/) {}

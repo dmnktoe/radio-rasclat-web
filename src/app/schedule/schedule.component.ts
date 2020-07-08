@@ -5,7 +5,7 @@ import { ApiService } from '@app/core/api.service';
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
-  styleUrls: ['./schedule.component.scss']
+  styleUrls: ['./schedule.component.scss'],
 })
 export class ScheduleComponent implements OnInit {
   schedule: any;
@@ -22,7 +22,7 @@ export class ScheduleComponent implements OnInit {
           this.isLoading = false;
         })
       )
-      .subscribe(schedule => {
+      .subscribe((schedule) => {
         this.schedule = schedule;
       });
   }

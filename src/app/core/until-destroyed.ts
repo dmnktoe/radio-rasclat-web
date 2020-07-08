@@ -51,7 +51,7 @@ export function untilDestroyed(
     if (!instance[untilDestroyedSymbol]) {
       instance[untilDestroyedSymbol] = new Subject();
 
-      instance[destroyMethodName] = function() {
+      instance[destroyMethodName] = function () {
         if (hasDestroyFunction) {
           originalDestroy.apply(this, arguments);
         }

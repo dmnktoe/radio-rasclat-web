@@ -3,14 +3,14 @@ import {
   Injectable,
   InjectionToken,
   Injector,
-  Optional
+  Optional,
 } from '@angular/core';
 import {
   HttpClient,
   HttpEvent,
   HttpInterceptor,
   HttpHandler,
-  HttpRequest
+  HttpRequest,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -87,7 +87,7 @@ export class HttpService extends HttpClient {
       // Configure default interceptors that can be disabled here
       this.interceptors = [
         this.injector.get(ApiPrefixInterceptor),
-        this.injector.get(ErrorHandlerInterceptor)
+        this.injector.get(ErrorHandlerInterceptor),
       ];
     }
   }
@@ -120,7 +120,7 @@ export class HttpService extends HttpClient {
     return new HttpService(
       this.httpHandler,
       this.injector,
-      this.interceptors.filter(i => !(i instanceof interceptorType))
+      this.interceptors.filter((i) => !(i instanceof interceptorType))
     );
   }
 

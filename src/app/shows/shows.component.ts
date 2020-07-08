@@ -7,13 +7,13 @@ import {
   SwiperDirective,
   SwiperConfigInterface,
   SwiperScrollbarInterface,
-  SwiperPaginationInterface
+  SwiperPaginationInterface,
 } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-shows',
   templateUrl: './shows.component.html',
-  styleUrls: ['./shows.component.scss']
+  styleUrls: ['./shows.component.scss'],
 })
 export class ShowsComponent implements OnInit {
   shows = '';
@@ -30,17 +30,17 @@ export class ShowsComponent implements OnInit {
       // when window width is <= 640px
       640: {
         slidesPerView: 1,
-        spaceBetween: 30
+        spaceBetween: 30,
       },
       990: {
         slidesPerView: 2,
-        spaceBetween: 30
+        spaceBetween: 30,
       },
       1200: {
         slidesPerView: 3,
-        spaceBetween: 30
-      }
-    }
+        spaceBetween: 30,
+      },
+    },
   };
 
   constructor(private apiService: ApiService) {}
@@ -54,7 +54,7 @@ export class ShowsComponent implements OnInit {
           this.isLoading = false;
         })
       )
-      .subscribe(shows => {
+      .subscribe((shows) => {
         this.shows = shows;
       });
   }

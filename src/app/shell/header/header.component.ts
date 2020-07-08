@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 import {
   AuthenticationService,
   CredentialsService,
-  I18nService
+  I18nService,
 } from '@app/core';
 import { ApiService } from '@app/core/api.service';
 import { finalize } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import { finalize } from 'rxjs/operators';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   menuHidden = true;
@@ -30,9 +30,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     {
-      $(document).ready(function() {
+      $(document).ready(function () {
         let lastScrollTop = 0;
-        $(window).scroll(function(event) {
+        $(window).scroll(function (event) {
           const st = $(this).scrollTop();
           if (st > lastScrollTop) {
             if (!$('.navbar').hasClass('hidden')) {
@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
     this.apiService
       .getLiveInfo()
       .pipe(finalize(() => {}))
-      .subscribe(liveInfo => {
+      .subscribe((liveInfo) => {
         if (liveInfo.source_enabled === 'Master') {
           this.liveInfo = true;
         } else {
