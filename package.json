@@ -47,7 +47,7 @@
     "codecov": "^3.7.2",
     "core-js": "^3.6.5",
     "flashgrid": "^1.1.1",
-    "instantsearch.css": "^7.4.2",
+    "instantsearch.css": "^7.4.3",
     "instantsearch.js": "^3.7.0",
     "moment": "^2.27.0",
     "ng-lazyload-image": "^8.0.1",
