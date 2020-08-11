@@ -41,7 +41,7 @@
     "@sentry/cli": "^1.55.1",
     "@sentry/integrations": "^5.20.1",
     "@types/algoliasearch-helper": "^2.26.1",
-    "algoliasearch": "^3.35.1",
+    "algoliasearch": "^4.4.0",
     "angular-instantsearch": "^3.0.0-beta.5",
     "angulartics2": "9.1.0",
     "codecov": "^3.7.2",
