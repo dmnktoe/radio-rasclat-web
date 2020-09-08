@@ -39,7 +39,7 @@
     "@ngneat/svg-icon": "^1.0.0",
     "@ngx-translate/core": "^12.1.2",
     "@sentry/browser": "^5.22.3",
-    "@sentry/cli": "^1.55.2",
+    "@sentry/cli": "^1.56.1",
     "@sentry/integrations": "^5.22.3",
     "@types/algoliasearch-helper": "^2.26.1",
     "algoliasearch": "^3.35.1",
