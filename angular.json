@@ -32,7 +32,10 @@
               "src/OneSignalSDKWorker.js",
               "src/assets"
             ],
-            "styles": ["src/main.scss"],
+            "styles": [
+              "src/main.scss",
+              "./node_modules/flag-icon-css/css/flag-icon.min.css"
+            ],
             "scripts": ["./node_modules/node-vibrant/dist/vibrant.min.js"]
           },
           "configurations": {
