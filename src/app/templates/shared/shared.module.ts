@@ -19,6 +19,8 @@ import { PageBannerComponent } from './page-banner/page-banner.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TranslateModule } from '@ngx-translate/core';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
+import { LanguageSelectComponent } from './language-select/language-select.component';
+import { NgxFlagIconCssModule } from 'ngx-flag-icon-css';
 
 @NgModule({
   imports: [
@@ -29,6 +31,7 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
     }),
     LazyLoadImageModule,
     TranslateModule,
+    NgxFlagIconCssModule,
   ],
   declarations: [
     LoaderComponent,
@@ -43,6 +46,7 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
     DarkModeToggleComponent,
     PageBannerComponent,
     SocialIconsComponent,
+    LanguageSelectComponent,
   ],
   exports: [
     LoaderComponent,
@@ -58,6 +62,7 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
     DarkModeToggleComponent,
     PageBannerComponent,
     SocialIconsComponent,
+    LanguageSelectComponent,
   ],
   providers: [ApiService],
 })
