@@ -1,0 +1,15 @@
+<div class="languages" *ngIf="!isLoading == true">
+  <div class="grid-auto-lg">
+    <div
+      class="language__single"
+      [hidden]="isLoading"
+      *ngFor="let language of languages"
+    >
+      <div class="language__single__wrapper">
+        <flag-icon country="{{ language.code }}" squared></flag-icon>
+        {{ language.name }}
+        {{ language.translated_progress }}%
+      </div>
+    </div>
+  </div>
+</div>
