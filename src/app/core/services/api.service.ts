@@ -76,6 +76,19 @@ export class ApiService {
       );
   }
 
+  getLanguages() {
+    return this.httpClient
+      .get(environment.serverUrl + '/languages', withCache())
+      .pipe(
+        map((body: any) => body),
+        catchError(() =>
+          of(
+            'Es ist ein Fehler aufgetreten. Die verfügbaren Sprachen konnten nicht geladen werden.'
+          )
+        )
+      );
+  }
+
   getRecordings() {
     return this.httpClient
       .get(environment.serverUrl + '/recordings', withCache())
