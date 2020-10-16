@@ -3,6 +3,11 @@
   display: block;
   position: relative;
   border-radius: 5px;
+  border: 1px solid var(--page-background);
+}
+
+.language__single.active {
+  border: 1px solid var(--primary-color);
 }
 
 .language__single__wrapper {

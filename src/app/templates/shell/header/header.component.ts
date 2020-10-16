@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { I18nService } from '@app/core';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +11,7 @@ export class HeaderComponent implements OnInit {
   isLanguagePickerVisible = false;
   now: number;
 
-  constructor(private router: Router, private i18nService: I18nService) {
+  constructor(private router: Router) {
     setInterval(() => {
       this.now = Date.now();
     }, 10);
@@ -31,16 +30,4 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {}
-
-  setLanguage(language: string) {
-    this.i18nService.language = language;
-  }
-
-  get currentLanguage(): string {
-    return this.i18nService.language;
-  }
-
-  get languages(): string[] {
-    return this.i18nService.supportedLanguages;
-  }
 }

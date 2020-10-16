@@ -1,9 +1,12 @@
 <div class="languages" *ngIf="!isLoading">
+  {{ currentLanguage }}
   <div class="grid-auto-md grid-gap-sm">
     <div
       class="language__single"
       [hidden]="isLoading"
-      *ngFor="let language of languages"
+      *ngFor="let language of availableLanguages"
+      (click)="setLanguage(language.twoLettersCode)"
+      [class.active]="currentLanguage === language.twoLettersCode.toUpperCase()"
     >
       <div
         class="progressbar"
