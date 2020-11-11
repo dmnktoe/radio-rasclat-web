@@ -14,10 +14,17 @@ cache:
 install:
   - npm install
 
-script:
-  - npm test
-  - npm run build
-  - bash sentry-deploy.sh
+jobs:
+  include:
+    - stage: Lint
+      script: npm run lint
+    - stage: Test
+      script: npm test
+    - script: ng e2e
+    - stage: Build
+      script: npm run build
+    - stage: Sentry Deploy
+      script: bash sentry-deploy.sh
 
 after_success:
   - codecov
