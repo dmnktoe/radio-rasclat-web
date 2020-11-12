@@ -10,8 +10,6 @@ addons:
 cache:
   directories:
     - ./node_modules
-    - ~/.cache
-    - ~/Cypress/*
 
 install:
   - npm install
