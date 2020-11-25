@@ -16,11 +16,19 @@
   border-radius: 5px;
   padding: 1rem;
   transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
 }
 
 .language__single__wrapper:hover {
   background: var(--card-light-background-hover);
   cursor: pointer;
+}
+
+.language__single__wrapper img {
+  width: 25px;
+  border-radius: 5px;
+  margin-right: 1rem;
 }
 
 .progressbar {

@@ -17,14 +17,25 @@
         [style.width.%]="language.translationProgress"
       ></div>
       <div class="language__single__wrapper">
-        {{
-          language?.name.length > 15
-            ? (language?.name | slice: 0:15) + '...'
-            : language?.name
-        }}
-        <span class="translationProgress"
-          >{{ language?.translationProgress }}%</span
-        >
+        <div class="language__single__wrapper__flag">
+          <img
+            src="assets/svg/flags/{{ language?.twoLettersCode }}.svg"
+            alt="{{ language?.name }}"
+          />
+        </div>
+        <div class="language__single__wrapper__name">
+          {{
+            language?.name.length > 15
+              ? (language?.name | slice: 0:15) + '...'
+              : language?.name
+          }}<br />
+          {{ language?.twoLettersCode }}
+        </div>
+        <div class="language__single__wrapper__progress">
+          <span class="translationProgress"
+            >{{ language?.translationProgress }}%</span
+          >
+        </div>
       </div>
     </div>
   </div>
