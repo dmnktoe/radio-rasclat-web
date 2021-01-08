@@ -63,7 +63,7 @@
     "popper.js": "^1.16.1",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
-    "tslib": "^2.0.3",
+    "tslib": "^2.1.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
