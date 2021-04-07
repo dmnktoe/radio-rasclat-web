@@ -6,7 +6,6 @@
 }
 
 .swiper-slide {
-  background: #fff;
   width: 100% !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,6 +42,7 @@
   height: 450px;
   background-size: cover;
   background-position: center center;
+  border-radius: var(--border-radius);
 }
 
 .swiper-slide .slideshowSlide.loading {
@@ -63,7 +63,12 @@
   bottom: 0;
   display: block;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 .slideshowSlideCaption {
   color: #fff;
@@ -80,6 +85,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 35rem;
+  transition: var(--transition-time);
 }
 
 .slideshowSlideCaption__textArea h4:hover {
