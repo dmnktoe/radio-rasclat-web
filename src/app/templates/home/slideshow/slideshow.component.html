@@ -40,7 +40,7 @@
                     >
                       <span class="pulse"></span> {{ 'live' | translate }} on
                       Radio Rasclat &mdash; {{ live?.timeEnd | timeago }} left
-                      <h4>↳{{ live?.title }}</h4>
+                      <h4>{{ live?.title }}</h4>
                     </div>
                   </div>
                 </div>
@@ -55,7 +55,7 @@
                   <div class="slideshowSlideCaption">
                     <div class="slideshowSlideCaption__textArea">
                       Stream the KW36 live.<br />
-                      <h4>↳Radio Rasclat now live on Twitch!</h4>
+                      <h4>Radio Rasclat now live on Twitch!</h4>
                     </div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@
                     <div class="slideshowSlideCaption__textArea">
                       {{ 'nextUp' | translate }} on Radio Rasclat &mdash;
                       {{ nextUp?.timeStart }}<br />
-                      <h4>↳{{ nextUp?.title }}</h4>
+                      <h4>{{ nextUp?.title }}</h4>
                     </div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ 'hotThisMonth' | translate }} &mdash;
                         {{ hotRecording?.viewCounter }} plays:<br />
-                        <h4>↳{{ hotRecording?.title }}</h4>
+                        <h4>{{ hotRecording?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -132,7 +132,7 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
-                        <h4>↳{{ recording?.title }}</h4>
+                        <h4>{{ recording?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -156,7 +156,7 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ 'fromOurBlog' | translate }} &mdash;
                         {{ blogPost?.createdAt | date: 'dd.MM.yyyy' }}<br />
-                        <h4>↳{{ blogPost?.title }}</h4>
+                        <h4>{{ blogPost?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -180,7 +180,7 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ 'events' | translate }} &mdash;
                         {{ project?.timeStart | timeago }}<br />
-                        <h4>↳{{ project?.title }}</h4>
+                        <h4>{{ project?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -204,7 +204,6 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
-                        <h4>↳{{ recording?.title }}</h4>
                       </div>
                     </div>
                   </div>

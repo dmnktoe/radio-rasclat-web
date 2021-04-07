@@ -21,7 +21,7 @@
       <div class="col-8@sm">
         <div class="artist__info__container">
           <div class="artist__title">
-            <h1 [style.color]="hex">↳{{ artist?.title }}</h1>
+            <h1 [style.color]="hex">{{ artist?.title }}</h1>
           </div>
           <div class="artist__counter" [style.color]="hex">
             <span *ngIf="recordings?.length == 1">
