@@ -8,7 +8,7 @@
   background-color: var(--card-light-background);
   border-radius: var(--card-border-radius);
   padding: 1rem;
-  transition: all 0.15s ease;
+  transition: var(--transition-time);
 }
 
 .changelog .app:hover {

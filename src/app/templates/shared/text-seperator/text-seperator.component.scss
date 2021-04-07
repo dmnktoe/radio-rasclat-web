@@ -8,7 +8,7 @@
 
 .textSeperator.active {
   background: var(--card-background-hover);
-  transition: all 0.15s ease;
+  transition: var(--transition-time);
 }
 
 @media only screen and (min-width: 32rem) {

@@ -27,7 +27,7 @@
 }
 
 .recording:hover > .recording__wrapper {
-  transition: all 0.15s ease;
+  transition: var(--transition-time);
   background-color: var(--card-background-hover);
 }
 
@@ -67,6 +67,7 @@
 
 .recording__tags a {
   text-decoration: underline;
+  transition: var(--transition-time);
 }
 
 .recording__dates {
