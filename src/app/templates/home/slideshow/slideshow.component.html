@@ -204,6 +204,7 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
+                        <h4>{{ recording?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -224,42 +225,48 @@
           <div class="swiper-slide">
             <div class="slideshowSlide loading">
               <div class="slideshowSlideInner">
-                <div class="slideshowSlideCaptionWrapper">
-                  <div class="slideshowSlideCaption">
-                    <div class="slideshowSlideCaption__textArea">
-                      &nbsp;
-                      <h4>↳{{ 'loading' | translate }}...</h4>
-                    </div>
-                  </div>
-                </div>
+                <ngx-skeleton-loader
+                  count="1"
+                  [theme]="{
+                    height: '450px',
+                    width: '100%',
+                    background: 'transparent',
+                    'border-radius': '25px'
+                  }"
+                >
+                </ngx-skeleton-loader>
               </div>
             </div>
           </div>
-          <div class="swiper-slide" *ngIf="hotRecording">
+          <div class="swiper-slide">
             <div class="slideshowSlide loading">
               <div class="slideshowSlideInner">
-                <div class="slideshowSlideCaptionWrapper">
-                  <div class="slideshowSlideCaption">
-                    <div class="slideshowSlideCaption__textArea">
-                      &nbsp;
-                      <h4>↳{{ 'loading' | translate }}...</h4>
-                    </div>
-                  </div>
-                </div>
+                <ngx-skeleton-loader
+                  count="1"
+                  [theme]="{
+                    height: '450px',
+                    width: '100%',
+                    background: 'transparent',
+                    'border-radius': '25px'
+                  }"
+                >
+                </ngx-skeleton-loader>
               </div>
             </div>
           </div>
-          <div class="swiper-slide" *ngIf="hotRecording">
+          <div class="swiper-slide">
             <div class="slideshowSlide loading">
               <div class="slideshowSlideInner">
-                <div class="slideshowSlideCaptionWrapper">
-                  <div class="slideshowSlideCaption">
-                    <div class="slideshowSlideCaption__textArea">
-                      &nbsp;
-                      <h4>↳{{ 'loading' | translate }}...</h4>
-                    </div>
-                  </div>
-                </div>
+                <ngx-skeleton-loader
+                  count="1"
+                  [theme]="{
+                    height: '450px',
+                    width: '100%',
+                    background: 'transparent',
+                    'border-radius': '25px'
+                  }"
+                >
+                </ngx-skeleton-loader>
               </div>
             </div>
           </div>
