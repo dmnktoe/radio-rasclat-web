@@ -21,6 +21,21 @@
   color: var(--text-color);
 }
 
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: var(--page-background);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--page-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border: 0;
+}
+
 * {
   outline: none !important;
 }
