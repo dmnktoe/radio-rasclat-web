@@ -12,17 +12,13 @@
     >
       <div class="show__wrapper">
         <div class="show__info__container">
-          <div class="show__description">
-            {{
-              show?.description.length > 30
-                ? (show?.description | safeHtml | slice: 0:30) + '...'
-                : show?.description
-            }}
-          </div>
           <div class="show__title">
             <h4>
               <a routerLink="/shows/{{ show?.slug }}">{{ show?.title }} </a>
             </h4>
+          </div>
+          <div class="show__description">
+            {{ show?.description | safeHtml }}
           </div>
         </div>
         <div class="show__image__container">

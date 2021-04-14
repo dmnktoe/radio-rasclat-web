@@ -35,15 +35,25 @@
   padding: 1rem;
   position: relative;
   background-color: var(--card-background);
+  height: 100%;
 }
 
 .show__info__container {
   width: 100%;
 }
 
+.show__title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .show__description {
-  line-height: inherit;
-  margin-bottom: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .show__image__container {
