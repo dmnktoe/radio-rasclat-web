@@ -15,7 +15,7 @@
           <div class="recording__tags">
             <span
               class="recording__tags__single"
-              *ngFor="let genre of recording?.genres.slice(0, 3)"
+              *ngFor="let genre of recording?.genres.slice(0, 1)"
             >
               <a
                 routerLink="/search"
@@ -37,9 +37,9 @@
           </div>
           <div class="recording__title">
             <a routerLink="/broadcasts/{{ recording?.slug }}">
-              <h4>
+              <h5>
                 {{ recording?.title }}
-              </h4>
+              </h5>
             </a>
           </div>
         </div>

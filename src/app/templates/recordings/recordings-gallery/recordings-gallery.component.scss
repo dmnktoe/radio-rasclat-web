@@ -37,7 +37,7 @@
 }
 
 .recording__wrapper {
-  padding: 1rem;
+  padding: 2rem;
   position: relative;
   background-color: var(--card-background);
 }
@@ -82,7 +82,7 @@
 }
 
 .recording__image__container {
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 .recording__image__container figure.square {
@@ -105,6 +105,13 @@
   object-position: center;
 }
 
+@media only screen and (min-width: 32rem) {
+  .recording__info__container {
+    height: auto;
+    min-height: 7rem;
+  }
+}
+
 @media only screen and (min-width: 48rem) {
   .recording.placeholder {
     display: block;
@@ -119,12 +126,18 @@
   }
 
   .recording__info__container {
-    height: 128px;
+    height: auto;
+    min-height: 8rem;
   }
 }
 
 @media only screen and (min-width: 64rem) {
   .recording.placeholder:nth-of-type(2) {
     display: block;
+  }
+
+  .recording__info__container {
+    height: auto;
+    min-height: 9rem;
   }
 }
