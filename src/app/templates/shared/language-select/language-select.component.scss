@@ -2,7 +2,7 @@
   width: 100%;
   display: block;
   position: relative;
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
   border: 1px solid var(--page-background);
   cursor: pointer;
 }
@@ -13,7 +13,7 @@
 
 .language__single__wrapper {
   background: var(--card-light-background);
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
   padding: 1rem;
   transition: var(--transition-time);
 }
@@ -28,7 +28,7 @@
   background: var(--primary-color);
   display: block;
   height: 100%;
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
   opacity: 0.05;
 }
 

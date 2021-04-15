@@ -25,7 +25,7 @@
     background: var(--secondary-color-light);
     color: var(--secondary-color);
     padding: 0 0.5rem;
-    border-radius: 5px;
+    border-radius: var(--card-border-radius);
     font-size: 80%;
   }
 
