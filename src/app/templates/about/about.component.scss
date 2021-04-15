@@ -15,3 +15,9 @@
   padding: 1rem;
   height: 5rem;
 }
+
+::ng-deep {
+  body.theme-light.theme-dark .partnersList .partner img {
+    filter: invert(1);
+  }
+}
