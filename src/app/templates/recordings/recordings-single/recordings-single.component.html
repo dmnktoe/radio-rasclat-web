@@ -81,7 +81,10 @@
           <div class="recording__dates">
             {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
             {{ recording?.timeStart | date: 'HH:mm' }} —
-            {{ recording?.timeEnd | date: 'HH:mm' }}
+            {{ recording?.timeEnd | date: 'HH:mm' }} •
+            <a routerLink="/shows/{{ recording?.show.slug }}">
+              {{ recording?.show.title }}
+            </a>
           </div>
         </div>
         <div class="recording__description__container">

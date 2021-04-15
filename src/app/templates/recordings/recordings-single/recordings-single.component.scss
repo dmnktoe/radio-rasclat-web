@@ -31,6 +31,10 @@
     font-weight: 800;
   }
 
+  .recording__dates a {
+    color: inherit;
+  }
+
   .recording__title {
     margin-bottom: 0.5rem;
   }
@@ -52,7 +56,7 @@
 }
 
 .recording__artists {
-  background: var(--card-light-background);
+  border: 1px solid var(--card-border);
   border-radius: var(--card-border-radius);
   padding: 2rem;
 
@@ -64,8 +68,8 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    margin-right: -10px;
-    border: 2px solid var(--card-background);
+    margin-right: -15px;
+    border: 3px solid var(--page-background);
     object-fit: cover;
   }
 }
