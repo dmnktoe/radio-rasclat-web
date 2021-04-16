@@ -62,3 +62,15 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <app-text-seperator [text]="'projects' | translate" [isLink]="false">
+  </app-text-seperator>
+
+  <app-projects-slider
+    [projects]="projects"
+    [isLoading]="isLoading"
+    [limit]="8"
+  >
+  </app-projects-slider>
+</div>
