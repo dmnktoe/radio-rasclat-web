@@ -50,7 +50,7 @@ body {
     "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 90%;
+  font-size: 100%;
   background-color: var(--page-background);
   color: var(--text-color);
 }
@@ -60,7 +60,7 @@ body {
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .container-full {
@@ -68,27 +68,27 @@ body {
   padding: 0 2rem;
 }
 
-/* responsive font-sizes */
-
-@media only screen and (min-width: 32rem) {
-  body {
-    font-size: 100%;
+@media only screen and (min-width: 48rem) {
+  .container {
+    padding: 0 2rem;
   }
 }
 
-@media only screen and (min-width: 48rem) {
+/* responsive font-sizes */
+
+@media only screen and (min-width: 32rem) {
   body {
     font-size: 110%;
   }
 }
 
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 48rem) {
   body {
     font-size: 120%;
   }
 }
 
-@media only screen and (min-width: 80rem) {
+@media only screen and (min-width: 64rem) {
   body {
     font-size: 130%;
   }
