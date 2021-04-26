@@ -23,6 +23,7 @@ import { TopBannerComponent } from './top-banner/top-banner.component';
 import { LanguageSelectComponent } from './language-select/language-select.component';
 import { ScriptHackComponent } from './script-hack/script-hack.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -51,6 +52,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     TopBannerComponent,
     LanguageSelectComponent,
     ScriptHackComponent,
+    FooterComponent,
   ],
   exports: [
     LoaderComponent,
@@ -69,6 +71,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     TopBannerComponent,
     LanguageSelectComponent,
     ScriptHackComponent,
+    FooterComponent,
   ],
   providers: [ApiService],
 })

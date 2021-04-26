@@ -1,0 +1,28 @@
+footer {
+  background: var(--card-background);
+  padding: 3rem 0;
+  border-top: 1px solid var(--card-border);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer h5 {
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+}
+
+.blog__list__entry {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 48rem) {
+  footer {
+    padding: 5rem 0;
+  }
+
+  footer h5 {
+    margin-bottom: 2rem;
+  }
+}
