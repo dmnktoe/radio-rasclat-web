@@ -10,6 +10,7 @@ import { Blog } from '@app/core/models/Blog';
 })
 export class FooterComponent implements OnInit {
   blogPosts: Blog[];
+  year: number = new Date().getFullYear();
   isLoading: boolean;
 
   constructor(private apiService: ApiService) {}
