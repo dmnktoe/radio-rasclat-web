@@ -41,13 +41,13 @@
               </div>
             </div>
             <div class="projectsEntry__excerpt">
-              <p
+              <span
                 [innerHTML]="
                   project?.description.length > 300
                     ? (project?.description | slice: 0:300) + '...'
                     : project?.description
                 "
-              ></p>
+              ></span>
             </div>
             <div class="projectsEntry__readMore">
               <a
