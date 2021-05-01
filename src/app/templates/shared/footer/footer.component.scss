@@ -11,6 +11,16 @@ footer {
       margin-bottom: 1rem;
     }
 
+    ul {
+      margin-bottom: 1rem;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        margin: 0;
+      }
+    }
+
     .blog__list {
       display: block;
     }
