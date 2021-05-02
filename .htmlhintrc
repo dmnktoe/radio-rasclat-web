@@ -2,5 +2,5 @@
     "tagname-lowercase": true,
     "attr-lowercase": false,
     "attr-value-double-quotes": true,
-    "doctype-first": null
+    "doctype-first": false
 }
