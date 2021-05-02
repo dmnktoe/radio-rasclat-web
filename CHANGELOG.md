@@ -1,5 +1,26 @@
 # Changelog
 
+## [4.2.1] - 2021-05-02
+
+### New
+
+- Projects-Slider: Displays all our recently hosted events.
+- Adds a footer with our latest blog posts.
+
+### Changes
+
+- Updated partner logos with their corresponding links.
+- Code cleanup.
+- UI improvements.
+- The new reordered homepage gives you a better overview.
+- New browser and SEO friendly meta tags.
+- Stylelint automation.
+- Font-size adjustments.
+
+### Bug-Fixes
+
+- Fix line-clamp issue that some strings were missing on WebKit.
+
 ## [4.2.0] - 2021-04-15
 
 ### New
@@ -137,6 +158,7 @@ We present Radio Rasclat Web in version four. The entire application has been en
 
 - Responsive UI issues.
 
+[4.2.1]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.2.1
 [4.2.0]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.2.0
 [4.1.0]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.1.0
 [4.0.4]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.0.4
