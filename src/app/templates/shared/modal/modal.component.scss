@@ -1,6 +1,9 @@
 @import "~theme/_z-index.scss";
 
-body.modal-open {
+body.modal-open,
+html.modal-open {
+  margin: 0;
+  height: 100%;
   overflow: hidden;
 }
 

@@ -12,7 +12,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CoreModule } from '@app/core';
 import { TimeagoModule } from 'ngx-timeago';
 import { SharedModule } from '@app/templates/shared';
-import { NgBodyScrollLockModule } from 'ng-body-scroll-lock';
 
 /* VIEWS */
 import { AboutModule } from '@app/templates/about/about.module';
@@ -115,7 +114,6 @@ export class SentryErrorHandler implements ErrorHandler {
     NgAisModule.forRoot(),
     TimeagoModule.forRoot(),
     LazyLoadImageModule,
-    NgBodyScrollLockModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
