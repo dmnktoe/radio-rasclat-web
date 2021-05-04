@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import Vibrant from 'node-vibrant';
 import { Palette } from 'node-vibrant/lib/color';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-projects-single',
@@ -25,7 +26,8 @@ export class ProjectsSingleComponent implements OnInit {
     private apiService: ApiService,
     private route: ActivatedRoute,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private toastService: ToastrService
   ) {}
 
   public setTitle({ title }: { title: any }) {
@@ -36,32 +38,40 @@ export class ProjectsSingleComponent implements OnInit {
     this.sub = this.route.params.subscribe((params) => {
       this.isLoading = true;
       this.id = params.id;
-      this.apiService
-        .getProject({ projectId: this.id })
-        .pipe(
-          finalize(() => {
-            this.isLoading = false;
-          })
-        )
-        .subscribe((project) => {
-          this.project = project;
-          this.setTitle({ title: this.project.title });
-          Vibrant.from(
-            'https://cors-proxy.radio-rasclat.com/' + this.project.image
+      if (this.id) {
+        this.apiService
+          .getProject({ projectId: this.id })
+          .pipe(
+            finalize(() => {
+              this.isLoading = false;
+            })
           )
-            .getPalette()
-            .then((palette) => {
-              this.hex = palette.Vibrant.hex;
-              this.rgba =
-                'rgba(' +
-                palette.Vibrant.r +
-                ',' +
-                palette.Vibrant.g +
-                ',' +
-                palette.Vibrant.b +
-                ',0.15)';
-            });
-        });
+          .subscribe((project) => {
+            if (project && project.status !== 404) {
+              this.project = project;
+              this.setTitle({ title: this.project.title });
+              Vibrant.from(
+                'https://cors-proxy.radio-rasclat.com/' + this.project.image
+              )
+                .getPalette()
+                .then((palette) => {
+                  this.hex = palette.Vibrant.hex;
+                  this.rgba =
+                    'rgba(' +
+                    palette.Vibrant.r +
+                    ',' +
+                    palette.Vibrant.g +
+                    ',' +
+                    palette.Vibrant.b +
+                    ',0.15)';
+                });
+            } else {
+              this.toastService.info(project.message, project.status, {
+                closeButton: true,
+              });
+            }
+          });
+      }
     });
   }
 }
