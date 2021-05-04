@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Blog } from '@app/core/models/Blog';
 
 @Component({
   selector: 'app-blog-list',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./blog-list.component.scss'],
 })
 export class BlogListComponent implements OnInit {
-  @Input() blogPosts = '';
+  @Input() blogPosts: Blog[];
   @Input() limit: number;
   @Input() isLoading = false;
 
