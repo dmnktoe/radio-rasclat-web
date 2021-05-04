@@ -56,46 +56,32 @@ export class SlideshowComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isLoading = true;
-    /* this.apiService
-      .getLiveInfo()
-      .pipe(finalize(() => {}))
-      .subscribe((liveInfo) => {
-        if (liveInfo.source_enabled === 'Master') {
-          this.liveInfo = true;
-        } else {
-          if (liveInfo.source_enabled === 'Live') {
-            this.liveInfo = true;
-          } else {
-            this.liveInfo = false;
+    if (this.live !== undefined) {
+      this.apiService
+        .getCurrentShow()
+        .pipe(finalize(() => {}))
+        .subscribe((currentShow) => {
+          if (currentShow !== null) {
+            this.currentShowName = currentShow.name;
+            this.currentShowImg = currentShow.image_path;
+            this.currentShowStart = new Date(currentShow.starts);
+            this.currentShowEnd = new Date(currentShow.ends);
           }
-        }
-      }); */
-    this.apiService
-      .getCurrentShow()
-      .pipe(finalize(() => {}))
-      .subscribe((currentShow) => {
-        if (currentShow !== null) {
-          this.currentShowName = currentShow.name;
-          this.currentShowImg = currentShow.image_path;
-          this.currentShowStart = new Date(currentShow.starts);
-          this.currentShowEnd = new Date(currentShow.ends);
-        }
-        this.apiService
-          .getNextShow()
-          .pipe(finalize(() => {}))
-          .subscribe((nextShow) => {
-            if (nextShow.length > 0) {
-              const startDate = moment(
-                nextShow[0].starts,
-                'YYYY-MM-DD HH:mm:ss'
-              ).toDate();
-              this.nextShowName = nextShow[0].name;
-              this.nextShowStart = moment(startDate).fromNow();
-            }
-            this.isLoading = false;
-          });
-      });
+          this.apiService
+            .getNextShow()
+            .pipe(finalize(() => {}))
+            .subscribe((nextShow) => {
+              if (nextShow.length > 0) {
+                const startDate = moment(
+                  nextShow[0].starts,
+                  'YYYY-MM-DD HH:mm:ss'
+                ).toDate();
+                this.nextShowName = nextShow[0].name;
+                this.nextShowStart = moment(startDate).fromNow();
+              }
+            });
+        });
+    }
   }
 
   openStream() {
