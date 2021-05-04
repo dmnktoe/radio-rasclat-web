@@ -1,25 +1,66 @@
 <header>
   <div class="container">
     <div class="grid grid-gap-xs">
-      <div class="col-5">
-        <app-live></app-live>
-      </div>
-      <div class="col-2 text-center">
-        <div class="logo animate__animated animate__rotateIn">
-          <a routerLink="/" (click)="closeNav()">
-            <img
-              src="../../../../assets/svg/logo.svg"
-              alt="Radio Rasclat Logo"
-            />
-          </a>
+      <div class="col-12">
+        <div class="mainHeader">
+          <div class="mainLogo animate__animated animate__rotateIn">
+            <a routerLink="/" (click)="closeNav()">
+              <img
+                  src="../../../../assets/svg/logo.svg"
+                  alt="Radio Rasclat Logo"
+              />
+            </a>
+          </div>
+          <div class="mainNavigation">
+            <a (click)="toggleNav()" class="nav-item nav-item-menu">
+              <div class="navLinkButton">
+                <svg-icon *ngIf="!isNavVisible" key="menu"></svg-icon>
+                <svg-icon *ngIf="isNavVisible" key="menuClose"></svg-icon>
+              </div>
+            </a>
+            <a
+                routerLink="/broadcasts"
+                routerLinkActive="active"
+                (click)="closeNav()"
+                class="nav-item"
+            >
+              <div class="navLinkButton">
+                {{ 'broadcasts' | translate }}
+              </div>
+            </a>
+            <a
+                routerLink="/shows"
+                routerLinkActive="active"
+                (click)="closeNav()"
+                class="nav-item"
+            >
+              <div class="navLinkButton">
+                {{ 'shows' | translate }}
+              </div>
+            </a>
+            <a
+                routerLink="/schedule"
+                routerLinkActive="active"
+                (click)="closeNav()"
+                class="nav-item"
+            >
+              <div class="navLinkButton">
+                {{ 'schedule' | translate }}
+              </div>
+            </a>
+            <a
+                routerLink="/search"
+                routerLinkActive="active"
+                (click)="closeNav()"
+                class="nav-item nav-item-search"
+            >
+              <div class="navLinkButton">
+                <svg-icon key="search"></svg-icon>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="col-5 text-right">
-        <a (click)="toggleNav()" class="menu">
-          {{ 'menu' | translate }}
-          <svg-icon *ngIf="!isNavVisible" key="menu"></svg-icon>
-          <svg-icon *ngIf="isNavVisible" key="menuClose"></svg-icon>
-        </a>
+        <app-live></app-live>
       </div>
     </div>
   </div>

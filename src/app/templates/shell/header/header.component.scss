@@ -10,18 +10,32 @@ header {
   top: -1px;
 }
 
-header .grid {
+header .col-12 {
+  display: flex;
   align-items: center;
-  height: 50px;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 
-header a {
-  text-decoration: none;
+header .mainHeader {
+  display: flex;
+  align-items: center;
 }
 
-header .logo {
-  margin-top: 3px;
+header .mainHeader .mainLogo {
+  display: flex;
+  align-items: center;
+}
+
+header .mainHeader .mainLogo img {
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .mainHeader .mainNavigation {
+  display: flex;
+  align-items: center;
 }
 
 header svg-icon.svg-icon-menu,
@@ -30,13 +44,30 @@ svg-icon.svg-icon-menuClose {
   height: 10px;
 }
 
-header a.menu {
-  cursor: pointer;
-  text-transform: uppercase;
+header .mainHeader .mainNavigation a.nav-item {
+  display: none;
 }
 
-header .logo img {
-  width: 35px;
+header .mainHeader .mainNavigation a.nav-item-menu {
+  display: block;
+}
+
+header .mainHeader .mainNavigation a .navLinkButton {
+  display: flex;
+  position: relative;
+  padding: .6rem 1rem;
+  margin: .5rem .5rem .5rem 0;
+  border-radius: var(--border-radius);
+  font-family: "Trash Medium", serif;
+  transition: var(--transition-time);
+  justify-content: center;
+  align-items: center;
+}
+
+header .mainHeader .mainNavigation a.active .navLinkButton {
+  background: var(--secondary-color-light);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color-light);
 }
 
 @media only screen and (min-width: 32rem) {
@@ -50,12 +81,16 @@ header .logo img {
 
 @media only screen and (min-width: 48rem) {
 
-  header .logo img {
+  header .mainHeader .mainLogo {
+    margin-right: 1rem;
+  }
+
+  header .mainHeader .mainLogo img {
     width: 40px;
     transition: all .15s;
   }
 
-  header .logo img:hover {
+  header .mainHeader .mainLogo img:hover {
     transform: rotate(-5deg);
   }
 
@@ -63,6 +98,32 @@ header .logo img {
   svg-icon.svg-icon-menuClose {
     width: 19px;
     height: 12px;
+  }
+
+  header svg-icon.svg-icon-search {
+    width: 27px;
+    height: 18px;
+  }
+
+  header .mainHeader .mainNavigation a.nav-item {
+    display: block;
+  }
+
+  header .mainHeader .mainNavigation a.nav-item-search {
+    display: none;
+  }
+
+  header .mainHeader .mainNavigation a .navLinkButton {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid var(--card-background-hover);
+    min-height: 2.1em;
+  }
+
+  header .mainHeader .mainNavigation a .navLinkButton:hover {
+    background: var(--card-background-hover);
+    border: 2px solid var(--card-background-hover);
   }
 }
 
@@ -73,6 +134,15 @@ header .logo img {
     width: 21px;
     height: 13px;
   }
+
+  header svg-icon.svg-icon-search {
+    width: 29px;
+    height: 19px;
+  }
+
+  header .mainHeader .mainNavigation a.nav-item-search {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 80rem) {
@@ -82,6 +152,11 @@ header .logo img {
     width: 22px;
     height: 14px;
   }
+
+  header svg-icon.svg-icon-search {
+    width: 30px;
+    height: 20px;
+  }
 }
 
 /* Navigation */
@@ -90,12 +165,12 @@ nav {
   position: sticky;
   position: -webkit-sticky;
   width: 100%;
-  top: 50px;
+  top: 60px;
 }
 
 nav.navVisible {
   position: absolute;
-  top: 51px;
+  top: 60px;
 }
 
 .infoBanner {
