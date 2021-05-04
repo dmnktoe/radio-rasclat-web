@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { ApiService } from '@app/core/services/api.service';
+import { Artist } from '@app/core/models/Artist';
 
 @Component({
   selector: 'app-artists',
@@ -8,7 +9,7 @@ import { ApiService } from '@app/core/services/api.service';
   styleUrls: ['./artists.component.scss'],
 })
 export class ArtistsComponent implements OnInit {
-  artists = '';
+  artists: Artist[];
   isLoading = false;
   backgroundImg = false;
   backgroundImgPath: any;
