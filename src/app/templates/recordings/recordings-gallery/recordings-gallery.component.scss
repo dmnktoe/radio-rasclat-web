@@ -16,12 +16,10 @@
   &:before {
     content: "";
     position: absolute;
-    // match the grid gap for border thickness
     top: -1px;
     right: -1px;
     bottom: -1px;
     left: -1px;
-    // this becomes the border, and handles overlap
     background-color: var(--card-border);
   }
 }
@@ -37,9 +35,11 @@
 }
 
 .recording__wrapper {
-  padding: 2rem;
+  padding: 0;
   position: relative;
   background-color: var(--card-background);
+  display: flex;
+  align-items: center;
 }
 
 .recording.placeholder {
@@ -71,7 +71,11 @@
 }
 
 .recording__dates {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
+}
+
+.recording__info__container {
+  padding: 1rem;
 }
 
 .recording__title a h5 {
@@ -82,7 +86,8 @@
 }
 
 .recording__image__container {
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 0;
+  width: 15rem;
 }
 
 .recording__image__container figure.square {
@@ -110,6 +115,29 @@
   .recording__info__container {
     height: auto;
     min-height: 7rem;
+  }
+}
+
+@media only screen and (min-width: 41rem) {
+
+  .recording__wrapper {
+    padding: 2rem;
+    position: relative;
+    background-color: var(--card-background);
+    display: block;
+  }
+
+  .recording__dates {
+    margin-bottom: 1rem;
+  }
+
+  .recording__info__container {
+    padding: 0;
+  }
+
+  .recording__image__container {
+    padding: 2rem 2rem 1rem 2rem;
+    width: unset;
   }
 }
 
