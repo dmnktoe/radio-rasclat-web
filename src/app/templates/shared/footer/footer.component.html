@@ -43,9 +43,26 @@
               </a>
             </li>
             <li>
-              <a href="mailto:office@radio-rasclat.com">
+              <a (click)="openParticipateDialog()">
                 {{ 'participate' | translate }}
               </a>
+            </li>
+            <li>
+              <a (click)="openModal('donationBox')">
+                {{ 'donate' | translate }}
+              </a>
+              <modal id="donationBox">
+                <h1>{{ 'donate' | translate }}</h1>
+                <hr />
+                <app-donation-box></app-donation-box>
+                <hr />
+                <a
+                    class="btn btn-secondary"
+                    (click)="closeModal('donationBox')"
+                >
+                  {{ 'close' | translate }}
+                </a>
+              </modal>
             </li>
           </ul>
         </div>

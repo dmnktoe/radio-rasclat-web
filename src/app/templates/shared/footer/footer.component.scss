@@ -1,3 +1,10 @@
+::ng-deep {
+
+  .typeform-iframe-wrapper {
+    width: 90% !important;
+  }
+}
+
 footer {
   background: var(--card-background);
   border-top: 1px solid var(--card-border);
@@ -68,6 +75,13 @@ footer {
 }
 
 @media only screen and (min-width: 48rem) {
+
+  ::ng-deep {
+
+    .typeform-iframe-wrapper {
+      width: 700px !important;
+    }
+  }
 
   .footer__wrapper {
     padding: 5rem 0;
