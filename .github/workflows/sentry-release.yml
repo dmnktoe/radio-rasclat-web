@@ -16,4 +16,5 @@ jobs:
           SENTRY_PROJECT: radio-rasclat-web
         with:
           environment: production
+          sourcemaps: './dist'
           version: ${{ github.ref }}
