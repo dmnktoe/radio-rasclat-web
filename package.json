@@ -5,6 +5,7 @@
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && ng build --prod",
+    "build:stats": "npm run env -s && ng build --prod --stats-json",
     "start": "npm run env -s && ng serve --aot",
     "serve:sw": "npm run build -s && npx http-server ./dist -p 4200",
     "lint": "ng lint && stylelint \"src/**/*.scss\" --syntax scss && htmlhint \"src\" --config .htmlhintrc",
@@ -18,7 +19,8 @@
     "prettier:check": "prettier --list-different \"./{src,e2e}/**/*.{ts,js,html,scss}\"",
     "postinstall": "opencollective-postinstall",
     "generate": "ng generate",
-    "generate-icons": "svg-to-ts"
+    "generate-icons": "svg-to-ts",
+    "analyze": "webpack-bundle-analyzer dist/stats.json"
   },
   "collective": {
     "url": "https://opencollective.com/radio-rasclat"
@@ -106,7 +108,8 @@
     "ts-node": "~8.10.2",
     "tslint": "~6.1.0",
     "tslint-config-prettier": "^1.14.0",
-    "typescript": "^3.9.9"
+    "typescript": "^3.9.9",
+    "webpack-bundle-analyzer": "^4.4.2"
   },
   "prettier": {
     "singleQuote": true,
