@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 import icons from '../../../assets/svg/svg-icons';
 import { ModalModule } from '@app/templates/shared/modal';
+import { NgxTippyModule } from 'ngx-tippy-wrapper';
 
 @NgModule({
   imports: [
@@ -18,9 +19,10 @@ import { ModalModule } from '@app/templates/shared/modal';
     RouterModule,
     SharedModule,
     SvgIconsModule.forRoot({
-      icons,
+      icons
     }),
     ModalModule,
+    NgxTippyModule
   ],
   declarations: [HeaderComponent, ShellComponent],
 })
