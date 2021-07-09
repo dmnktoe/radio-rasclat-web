@@ -27,9 +27,6 @@ let klaroConfig = {
             googleAnalytics: {
                 description: 'Web and user analytics hosted by Google.',
             },
-            donorbox: {
-                description: 'Donation via Donorbox.',
-            },
             purposes: {
                 analytics: 'Analytics',
                 security: 'Security',
@@ -53,11 +50,6 @@ let klaroConfig = {
                 ['_gat', '/', 'localhost'],
                 ['_gid', '/', 'localhost'],
             ],
-        },
-        {
-            name: 'donorbox',
-            title: 'Donorbox',
-            purposes: ['marketing'],
         },
     ],
 };
