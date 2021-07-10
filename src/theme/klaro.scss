@@ -6,6 +6,10 @@
   background: rgba(0, 0, 0, .75);
 }
 
+.klaro .cookie-modal .cm-modal.cm-klaro {
+  background-color: var(--card-light-background);
+}
+
 .klaro .cookie-notice:not(.cookie-modal-notice) {
   border-radius: 0;
   right: 0;
@@ -15,10 +19,10 @@
   box-shadow: none;
   width: 100%;
   max-width: none;
-  background-color: var(--card-light-background);
+  background-color: var(--card-background);
 
   .cn-body {
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     box-shadow: 0 -2px 20px rgb(0 0 0 / 10%);
     border-top: 1px solid var(--card-border);
   }
@@ -45,7 +49,7 @@
 .klaro .context-notice h2,
 .klaro .cookie-notice h1,
 .klaro .cookie-notice h2 {
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .klaro .cookie-modal a,
@@ -78,6 +82,13 @@
   white-space: nowrap;
   color: var(--primary-color);
   background: var(--primary-color-light);
+}
+
+.klaro button.cm-btn.cm-btn-danger {
+  background: transparent !important;
+  -webkit-box-shadow: inset 0 0 0 2px var(--card-border);
+  -moz-box-shadow: inset 0 0 0 2px var(--card-border);
+  box-shadow: inset 0 0 0 2px var(--card-border);
 }
 
 .klaro .cm-btn:hover {
@@ -113,6 +124,25 @@
 .klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider {
   background-color: var(--secondary-color);
+}
+
+.klaro .cookie-modal .cm-list-label .slider,
+.klaro .context-notice .cm-list-label .slider,
+.klaro .cookie-notice .cm-list-label .slider {
+  background-color: var(--card-background);
+}
+
+.klaro .cookie-modal .cm-list-description,
+.klaro .context-notice .cm-list-description,
+.klaro .cookie-notice .cm-list-description {
+  color: var(--text-color-light);
+}
+
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p.purposes,
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p.purposes,
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p.purposes,
+.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p.purposes {
+  color: var(--text-color-light);
 }
 
 .klaro .cm-caret {
