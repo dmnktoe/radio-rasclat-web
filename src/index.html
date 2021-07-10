@@ -12,7 +12,6 @@
       content="Radio Rasclat is a non-profit community radio station based in Kassel - broadcasting a wide range of underground music, events, live talks and arts."
     />
     <meta name="theme-color" content="#6157f7" />
-
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-itunes-app" content="app-id=1499269866" />
@@ -20,6 +19,68 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+    <style type="text/css">
+      body,
+      html {
+        height: 100%;
+      }
+
+      .app-loading {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .app-loading .spinner {
+        height: 100px;
+        width: 100px;
+        animation: rotate 2s linear infinite;
+        transform-origin: center center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      .app-loading .spinner .path {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        animation: dash 1.5s ease-in-out infinite;
+        stroke-linecap: round;
+        stroke: #cfcfcf;
+      }
+
+      @keyframes rotate {
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes dash {
+
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+
+        50% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -35px;
+        }
+
+        100% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -124px;
+        }
+      }
+    </style>
 
     <script type="text/javascript" src="assets/js/klaro/klaro.js"></script>
 
@@ -94,6 +155,13 @@
         in your browser.
       </p>
     </noscript>
-    <app-root></app-root>
+    <app-root>
+      <div class="app-loading">
+        <div class="logo"></div>
+        <svg class="spinner" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="1" stroke-miterlimit="6"/>
+        </svg>
+      </div>
+    </app-root>
   </body>
 </html>
