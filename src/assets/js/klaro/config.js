@@ -8,8 +8,8 @@ let klaroConfig = {
     htmlTexts: true,
     groupByPurpose: true,
     storageMethod: 'cookie',
-    cookieName: 'klaro',
-    // cookieDomain: '.github.com',
+    cookieName: 'rasclatCookieSettings',
+    cookieDomain: 'radio-rasclat.com',
     mustConsent: false,
     acceptAll: true,
     hideDeclineAll: false,
@@ -22,10 +22,19 @@ let klaroConfig = {
             consentModal: {
                 title: '🍪 Cookie Settings',
                 description:
-                    'Radio Rasclat uses cookies to improve your user experience and for advertising purposes. Below you have the opportunity to review and manage your cookie settings for privacy purposes.',
+                    'We use cookies to analyze traffic on radio-rasclat.com, personalize on-site content and enhance your experience on this website. By clicking ‘accept’, you’re telling us you’re okay with us placing cookies on your browser and, where applicable, processing your related personal data for these purposes. You’re able to manage and withdraw your consent via our cookie settings below.',
             },
+            consentNotice: {
+                learnMore: 'Cookie Settings',
+                description: 'We use cookies to analyze traffic on radio-rasclat.com, personalize on-site content and enhance your experience on this website. By clicking ‘accept’, you’re telling us you’re okay with us placing cookies on your browser and, where applicable, processing your related personal data for these purposes. You’re able to manage and withdraw your consent via our cookie settings.'
+            },
+            decline: 'Decline',
+            ok: 'Accept',
             googleAnalytics: {
                 description: 'Web and user analytics hosted by Google.',
+            },
+            hotjar: {
+                description: 'Hotjar is a product experience insights tool that gives us behavior analytics.',
             },
             purposes: {
                 analytics: 'Analytics',
@@ -49,6 +58,15 @@ let klaroConfig = {
                 ['_ga', '/', 'localhost'],
                 ['_gat', '/', 'localhost'],
                 ['_gid', '/', 'localhost'],
+            ],
+        },
+        {
+            name: 'hotjar',
+            title: 'Hotjar',
+            purposes: ['analytics'],
+            cookies: [
+                ['_hj.*', '/', 'radio-rasclat.com'],
+                ['_hj.*', '/', 'localhost'],
             ],
         },
     ],
