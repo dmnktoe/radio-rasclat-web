@@ -3,12 +3,12 @@ import React from 'react';
 import Box from './Box';
 
 const stories = {
-  title: 'Components'
+  title: 'Layout'
 };
 
 export default stories;
 
-export const defaultBox = () => {
+export const Box1 = () => {
   return (
     <Box
       p={3}
