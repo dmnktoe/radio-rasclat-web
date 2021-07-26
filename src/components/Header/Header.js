@@ -26,12 +26,14 @@ const NavWrapper = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
 
-  :not(:last-child) {
-    margin-right: 24px;
+  > * {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
   }
 
   svg {
-    width: 50px;
+    width: 40px;
   }
 `
 
@@ -47,7 +49,7 @@ function Header() {
           <Logo />
 
           <SearchWrapper>
-
+            Test
           </SearchWrapper>
 
           <Tippy
@@ -60,6 +62,10 @@ function Header() {
           >
             <button>My button</button>
           </Tippy>
+
+          <div class="buttonStack">
+            <button>Listen</button>
+          </div>
 
         </NavWrapper>
       </Container>
