@@ -1,6 +1,6 @@
 {
-  "name": "retina-fm",
-  "version": "0.1.0",
+  "name": "radio-rasclat-web",
+  "version": "5.0.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
@@ -26,13 +26,13 @@
     "web-vitals": "^1.1.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/addons": "^6.3.4",
-    "@storybook/node-logger": "^6.3.4",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/addons": "^6.3.6",
+    "@storybook/node-logger": "^6.3.6",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.4"
+    "@storybook/react": "^6.3.6"
   },
   "eslintConfig": {
     "extends": [
