@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && ng build --prod",
-    "build:stats": "npm run env -s && ng build --prod --stats-json",
+    "build:stats": "npm run env -s && ng build --stats-json",
     "start": "npm run env -s && ng serve --aot",
     "serve:sw": "npm run build -s && npx http-server ./dist -p 4200",
     "lint": "ng lint && stylelint \"src/**/*.scss\" --syntax scss && htmlhint \"src\" --config .htmlhintrc",
