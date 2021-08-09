@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ModalService } from '@app/core/services/modal.service';
 import { I18nService } from '@app/core';
 import { ApiService } from '@app/core/services/api.service';
-import { NgxTippyProps } from 'ngx-tippy-wrapper';
+import { NgxTippyProps, NgxTippyService } from 'ngx-tippy-wrapper';
 declare var klaro: any;
 
 @Component({
@@ -30,7 +30,8 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private i18nService: I18nService,
     private apiService: ApiService,
-    private modalService: ModalService
+    private modalService: ModalService,
+    private tippyService: NgxTippyService
   ) {
     setInterval(() => {
       this.now = Date.now();
@@ -43,6 +44,10 @@ export class HeaderComponent implements OnInit {
 
   closeNav() {
     this.isNavVisible = false;
+  }
+
+  closeDropdown() {
+    this.tippyService.hide('navDropdown');
   }
 
   toggleLanguagePicker() {
